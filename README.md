@@ -32,3 +32,15 @@ TRAER DATOS DE LA TABLA
 select * from usuarios where id >2;
 
 https://app.diagrams.net/
+
+AGREGAR COLUMNA A TABLA
+ALTER TABLE `tienda`.`usuarios`               //  ingreso a la BD tienda para modificar la tabla tienda 
+ADD COLUMN 'apellido' VARCHAR(100) NULL AFTER 'nombre',       // agrego una columna llamada apellido
+CHANGE COLUMN `fecha_registro` `telefono` VARCHAR(20) NULL DEFAULT NULL ;  // cambio el nombre de una columna
+
+insert into usuarios (nombre, apellido,telefono)
+values ("jhon","betava",3115329938);
+select * from usuarios;
+
+select * from productos order by precios desc limt 100
+

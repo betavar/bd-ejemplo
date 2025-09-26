@@ -17,6 +17,12 @@ MySQL Workbench
 	Fecha_Registro DATE
 );
 
+AGREGAR INFORMACION A TABLA
+
+insert into usuarios (nombre, apellido,telefono)
+values ("jhon","betava",3115329938);
+select * from usuarios;
+
 RELACION ENTRE TABLAS
 
 1) CREATE TABLE pedidos(
@@ -38,9 +44,6 @@ ALTER TABLE `tienda`.`usuarios`               //  ingreso a la BD tienda para mo
 ADD COLUMN 'apellido' VARCHAR(100) NULL AFTER 'nombre',       // agrego una columna llamada apellido
 CHANGE COLUMN `fecha_registro` `telefono` VARCHAR(20) NULL DEFAULT NULL ;  // cambio el nombre de una columna
 
-insert into usuarios (nombre, apellido,telefono)
-values ("jhon","betava",3115329938);
-select * from usuarios;
 
 select * from productos order by precios desc limt 100
 

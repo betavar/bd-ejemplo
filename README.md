@@ -33,13 +33,14 @@ RELACION ENTRE TABLAS
 	FOREIGN KEY (ID_usuario) REFERENCES usuarios(ID)
 );
 
-TRAER DATOS DE LA TABLA
-
+// TRAER DATOS DE LA TABLA //
 select * from usuarios where id >2;
 
+// pagina para hacer la relacion de tablas en diagramas //
 https://app.diagrams.net/
 
-AGREGAR COLUMNA A TABLA
+//  AGREGAR COLUMNA A TABLA //
+
 ALTER TABLE `tienda`.`usuarios`               //  ingreso a la BD tienda para modificar la tabla tienda 
 ADD COLUMN 'apellido' VARCHAR(100) NULL AFTER 'nombre',       // agrego una columna llamada apellido
 CHANGE COLUMN `fecha_registro` `telefono` VARCHAR(20) NULL DEFAULT NULL ;  // cambio el nombre de una columna
@@ -180,5 +181,23 @@ DELIMITER ;
 -- Uso
 select customerName, totalPedidos(customerNumber) as gasto
 from customers order by gasto desc;
+
+//                           //
+@app.route("/search")
+def search():
+    q = request.args.get ("q")
+    return f"el parametro de busqueda es {q}"
+
+como buscar en la web el parametro search
+http://127.0.0.1:5000/search?q=jhon
+
+//                             //
+from flask import url_for, redirect 
+@app.route("/old")
+def old():
+    return redirect(url_for("about"))
+
+http://127.0.0.1:5000/old
+
 
 

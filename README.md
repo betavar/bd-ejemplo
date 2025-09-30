@@ -182,6 +182,10 @@ DELIMITER ;
 select customerName, totalPedidos(customerNumber) as gasto
 from customers order by gasto desc;
 
+VISUAL STUDIO CODE
+
+TERMINAL: pip install flask    //para poder utilizar flask
+
 //                           //
 @app.route("/search")
 def search():
